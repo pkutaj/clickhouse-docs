@@ -24,7 +24,8 @@ Tableau can use ClickHouse databases and tables as a data source. This requires 
 5. Follow `clickhouse-tableau-connector-jdbc` instructions to download the compatible version of <a href="https://github.com/ClickHouse/clickhouse-java/releases/" target="_blank">ClickHouse JDBC driver</a>.
 
 :::note
-Make sure you download the **clickhouse-jdbc-x.x.x-shaded.jar** JAR file.
+There is a known issue related to schema discovery with a few JDBC versions,
+therefore we recommend using **clickhouse-jdbc-0.4.6-shaded.jar**.
 :::
 
 6. Store the JDBC driver in the following folder (based on your OS, if the folder doesn't exist you can create it):
