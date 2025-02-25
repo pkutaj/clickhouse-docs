@@ -146,7 +146,7 @@ These adjustments should significantly enhance the performance of the initial lo
 
 ### How should I scope my publications when setting up replication?
 
-You can let ClickPipes manage your publications (requires write access) or create them yourself. With ClickPipe-managed publications, we automatically handle table additions and removals as you edit the pipe. If self-managing, carefully scope your publications to only include tables you need to replicate - including unnecessary tables will slow down Postgres WAL decoding.
+You can let ClickPipes manage your publications (requires write access) or create them yourself. With ClickPipes-managed publications, we automatically handle table additions and removals as you edit the pipe. If self-managing, carefully scope your publications to only include tables you need to replicate - including unnecessary tables will slow down Postgres WAL decoding.
 
 If you include any table in publication, make sure it has either a primary key or `REPLICA IDENTITY FULL`. If you have tables without a primary key, creating a publication for all tables will cause DELETE and UPDATE operations to fail on those tables.
 
